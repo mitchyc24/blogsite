@@ -9,10 +9,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
+
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/dark.css' %}">
 
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.7.0/dist/css/bootstrap.min.css" integrity="sha384-Ayn1MjwGqdO3eU6J//+O8lkdluX9Ql5G6YbZr8pUJw5AS5fN1SDk4h4N/xz4X9e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-darkly@4.7.0/bootstrap-darkly.min.css" integrity="sha384-xE3zq9TpfYKZWcL0RwRtOIuVhJ06IOy4uV7xO9XF9l7hYgZ8uV7HFw1EQ2F5/6I" crossorigin="anonymous">
+   
     {% if title %}
     <title>Blog - {{title}}</title>
     {% else %}
@@ -21,11 +25,11 @@
 
 
 </head>
-<body>
+<body class="bg-dark text-light">
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-            <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Mitchell's Blog</a>
+            <a class="navbar-brand mr-5" href="{% url 'blog-home' %}">Mitchell's Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,5 +75,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.6/dist/umd/popper.min.js" integrity="sha384-5hG1K/A0m8TvvE4bEYTTb/Z2Q2v3cX/y+2YB60NhOEEU6OgU6Z8U6N0UfldNh38Y" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.7.0/dist/js/bootstrap.min.js" integrity="sha384-PnmvEp7SML8BdRVd9XGXQswV7W4kkYQf6zdZiElIEr6z8U6A5y5HcXFsk5g5I5W5" crossorigin="anonymous"></script>
+
+
+  </body>
 </html>
