@@ -10,6 +10,14 @@
             </div>
             <h2 class="article-title">{{ object.title }}</h2>
             <p class="article-content">{{ object.content }}</p>
+            <button class="btn btn-warning" onclick="updatePost()">Update Post</button>
+            <button class="btn btn-danger" onclick="deletePost()">Delete Post</button>
+            <div></div>
+        
+            <script>
+                function updatePost() {window.location.href = "{% url 'post-update' object.id %}";}
+                function deletePost() {window.location.href = "{% url 'post-delete' object.id %}";}
+            </script>
         </div>
     </article>
 {% endblock content %}
