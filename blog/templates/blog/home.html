@@ -12,10 +12,6 @@
                 </div>
                 <h3><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
                 <p class="article-content">{{ post.content }}</p>
-                {% if post.image %}
-                    <img src="{% static post.image.image.url %}" alt="{{ image.alt_text }}">
-                    <h3>There should be an image here</h3>
-                {% endif %}
             </div>
         </article>
     {% endfor %}
