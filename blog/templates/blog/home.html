@@ -4,7 +4,7 @@
 {% block content %}
     {% for post in posts %}
         <article class="media content-section">
-            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+            <!-- <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"> -->
             <div class="media-body">
                 <div class="article-metadata">
                     <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
@@ -12,9 +12,22 @@
                 </div>
                 <h3><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
                 <p class="article-content">{{ post.content }}</p>
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ image.alt_text }}">
+                    <br>
+                {% endif %}
             </div>
         </article>
     {% endfor %}
+
+    {% if user.is_authenticated %}
+        <button class="btn btn-primary mb-4" onclick="goToLink()" style="float: left;";>New Post</button>
+        <div></div>
+
+        <script>
+            function goToLink() {window.location.href = "{% url 'post-create' %}";}
+        </script>
+    {% endif %}
 
     {% if is_paginated %}
         <div class="d-flex justify-content-center">
@@ -24,6 +37,8 @@
                 <pre>__  </pre>  
             {% endif %}
         {% endif %}
+
+        
 
         {% for num in page_obj.paginator.page_range %}
             {% if page_obj.number == num %}
@@ -38,18 +53,12 @@
                 <pre>  __</pre>
             {% endif %}
             <a class="btn btn-outline-info mb-4 mx-2" href="?page={{ page_obj.paginator.num_pages}}">{{page_obj.paginator.num_pages}}</a>
-        {% endif %}
+            {% endif %}
         </div>         
     {% endif %}
 
-    {% if user.is_authenticated %}
-    <button class="btn btn-primary mb-4" onclick="goToLink()">New Post</button>
-    <div></div>
+    
 
-    <script>
-        function goToLink() {window.location.href = "{% url 'post-create' %}";}
-    </script>
-    {% endif %}
 
 
 {% endblock content %}

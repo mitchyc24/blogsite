@@ -1,14 +1,34 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
 {% block content %}
-
+    
+    
+    <img class="rounded-circle" src="{% static 'blog\portrait_mitchell_carroll_small.png' %}" style="float: right;">
     <h1>About</h1>
     <p>Hi, my name is Mitchell Carroll and this is my personal about page.</p>
+    
     <h2>Background</h2>
-    <p>I grew up in Havelock, Quebec. I received my Computer Science degree from the Royal Military College of Canada and have served 13 years in the Canadian Air Force.</p>
+    <p>
+        I grew up in a rural part of Quebec, Canada. I've always been interested in science and technology which led me tu pursue a Computer Science degree from the Royal Military College of Canada.
+        I served 13 years in the Canadian Air Force as an Aerospace Engineer, with postings int Nova Scotia and Ontario. I have had short deployments to the north including Iqaluit, Iceland, and Scotland.
+        I worked as a maintenance line officer, quality assurance manager, and as a electronic warfare support officer. 
+        I have since retired from the forces to pursue my interests elsewhere.
+    </p>
+    
     <h2>Interests</h2>
-    <p>In my free time, I enjoy [Interest 1], [Interest 2], and [Interest 3]. I am also an avid [Hobby] enthusiast.</p>
+    <p>
+        I am interested in a wide range of topics, including science, engineering, and physics. 
+        I enjoy solving problems and finding new ways to approach challenges. 
+        In my spare time, I enjoy playing chess and engaging with my pets and the natural world. 
+        I have a curiosity about animals and enjoy exploring geography and the vastness of space. 
+        I am also skilled in programming and use my knowledge to create new solutions. 
+        In addition to these technical pursuits, I also value physical and mental well-being and engage in activities like yoga, calisthenics, and mobility exercises. 
+        My interests also include futurism and humanism, and I am interested in considering the long-term impacts of technological and societal developments on the human experience.
+    </p>
+    
+    
     <h2>Contact</h2>
-    <p>You can contact me at [Email] or follow me on [Social Media].</p>
+    <p>You can contact me at <a href="mailto:mitchell.carroll.blog@gmail.com">mitchell.carroll.blog@gmail.com</a></p>
 
 {% endblock content %}

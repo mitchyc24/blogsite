@@ -15,6 +15,10 @@ body {
   .bg-steel {
     background-color: #5f788a;
   }
+
+  .bg-orange {
+    background-color: #ec9006;
+  }
   
   .site-header .navbar-nav .nav-link {
     color: #cbd5db;
